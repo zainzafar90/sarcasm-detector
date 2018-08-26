@@ -1,1 +1,6 @@
 wordnet
+averaged_perceptron_tagger
+brown
+conll2000
+movie_reviews
+punkt
