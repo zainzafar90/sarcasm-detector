@@ -4,6 +4,12 @@
     <div class="twelve columns">
         <div id="container" style="min-width: 310px; max-width: 400px; height: 300px; margin: 0 auto"></div>
     </div>
+    <div class="twelve columns">
+        <ul>
+            <li>Sarcastic: If the score is in positive range <b> 0</b> to <b> 100</b></li>
+            <li>Sincere: If the score is in negative range <b> 0</b> to <b> -100</b></li>
+        </ul>
+    </div>
 </div>
 
 
@@ -16,13 +22,17 @@
             plotBackgroundColor: null,
             plotBackgroundImage: null,
             plotBorderWidth: 0,
-            plotShadow: false
+            plotShadow: false,
+            backgroundColor: 'rgba(255, 255, 255, 0.0)'
         },
 
         title: {
-            text: 'Sarcastometer'
+            text: 'Sacasm Points: {{sarcasmScore}}'
         },
 
+        exporting: {
+            enabled: false
+        },
         pane: {
             startAngle: -150,
             endAngle: 150,
@@ -54,14 +64,14 @@
             },
             plotBands: [{
                 from: -100,
-                to: -30,
+                to: -20,
                 color: '#55BF3B' // green
             }, {
-                from: -30,
-                to: 50,
+                from: -25,
+                to: 25,
                 color: '#DDDF0D' // yellow
             }, {
-                from: 50,
+                from: 25,
                 to: 100,
                 color: '#DF5353' // red
             }]
@@ -69,7 +79,7 @@
 
         series: [{
             name: 'Sarcasm',
-            data: [{{sarcasmScore}}],
+            data: ['{{sarcasmScore}}'],
             tooltip: {
                 valueSuffix: ' Points'
             }

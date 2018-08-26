@@ -31,11 +31,3 @@ class SarcasmDetector():
 
         return percentage
 
-
-# while True:
-#     print "enter the sentence to get sarcastic score or type exit to quit"
-#     data = str(raw_input())
-#     if data == "exit":
-#         break
-#     else:
-#         print getSarcasmScore(data)
