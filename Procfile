@@ -1,1 +1,1 @@
-web: gunicorn "app:create_app('config.ProductionConfig')"
+web: gunicorn "app:create_app('config.DevelopmentConfig')"
