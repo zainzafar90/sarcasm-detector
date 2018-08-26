@@ -1,0 +1,45 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title> Sarcasm Detector - {% block title %} {% endblock %}</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <link rel="stylesheet" href="../static/css/skeleton.css">
+    <link rel="stylesheet" href="../static/css/styles.css">
+
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <h2 class="title">Sarcasm Detector</h2>
+        <form action="/sarcasm" method="GET">
+            <div class="row">
+                <div class="nine columns">
+                    <input name="query" placeholder="Type sentence to check whether it's sarcastic or not" class="u-full-width" type="text">
+                </div>
+                <div class="three columns">
+                    <input class="button-primary u-full-width" type="submit" value="Test">
+                </div>
+            </div>
+        </form>
+
+        <article>
+            {% block content %} {% endblock %}
+        </article>
+
+    </div>
+    <!-- #container -->
+</body>
+
+</html>
